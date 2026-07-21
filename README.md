@@ -15,6 +15,8 @@ ML-playGround/
     PolyRegression/
       icecreamsellingpred.py
       Ice_cream selling data.csv
+    Comparision_research/
+      ComparativeStudyON_LR,PR,RR.ipynb
 ```
 
 ## Current Projects
@@ -79,6 +81,39 @@ Run it from the project folder:
 cd linear_regression\PolyRegression
 python icecreamsellingpred.py
 ```
+
+### Comparative Regression Research
+
+#### Diabetes Dataset Model Comparison
+
+Location:
+
+```text
+linear_regression/Comparision_research/
+```
+
+This research notebook compares predictive performance across Linear Regression, Polynomial Regression, and Ridge Regression using the scikit-learn diabetes dataset. It focuses on how different regression approaches perform on the same dataset and how model complexity affects train/test results.
+
+It includes:
+
+- Loading the diabetes dataset with `load_diabetes`
+- Exploring dataset shape, summary statistics, missing values, and feature distributions
+- Visualizing feature spread with histograms and box plots
+- Studying feature relationships with a correlation heatmap
+- Training and evaluating a baseline `LinearRegression` model
+- Creating degree-4 polynomial features with `PolynomialFeatures`
+- Comparing train and test performance for polynomial regression
+- Applying `Ridge` regression to reduce overfitting on polynomial features
+- Evaluating models with R2 score, MSE, and RMSE
+- Plotting residuals, predicted vs. actual values, and Ridge alpha performance
+
+Open it in Jupyter:
+
+```powershell
+jupyter notebook linear_regression\Comparision_research\ComparativeStudyON_LR,PR,RR.ipynb
+```
+
+Key takeaway: the polynomial model fits the training data very strongly, but Ridge regularization gives better test performance by controlling overfitting.
 
 ## Requirements
 
